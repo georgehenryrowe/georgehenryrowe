@@ -1,0 +1,37 @@
+---
+title: How to make rainbow rollovers in CSS
+published: true
+slug: /changing-colour-rollovers-in-css
+tags: ["CSS, web design"]
+---
+
+<div>
+	<section>
+		
+		<hr />
+		<h3>How to create infinitely repeating rainbow rollovers in CSS (SASS)</h3>
+		<hr />
+		<br />
+
+		<p>You may have noticed that this site has some nifty rollovers that cycle through five colours. Some people think they are ugly; <a href="http://gifs.com/5CW">how little they know...</a></p>
+
+		<p>This is pretty easy to achieve in CSS:</p>
+
+		<p>1. First, choose your colours, however many you like. I used <a href="http://colours.neilorangepeel.com/">this site</a> to pick some particularly nifty ones. We're going to be all 2013 about it and use SCSS variables.</p>
+
+		<script src="https://gist.github.com/georgehenryrowe/d88ff8ecacb3e9294507.js"></script>
+
+		<p>2. Now that we have our colours, we need to create keyframes of each different colour to cycle through when we rollover an element. Make your increments regular, and remember to finish on the same colour that you started on so you don't get a jump.</p>
+
+		<script src="https://gist.github.com/georgehenryrowe/9631589.js"></script> 
+
+		<p>3. Once the keyframes are setup it's just a matter of adding the animation on the rollover of our links.</p>
+
+		<script src="https://gist.github.com/georgehenryrowe/9631739.js"></script>
+		
+		<br />
+		<p>Et voila: infinitely changing colour rollovers. You can apply this method to anything really; the top bar of the site is also cycling through these colours over 90 seconds.</p>
+
+	</section>
+
+</div>

@@ -1,0 +1,28 @@
+{% block content %}
+
+	<div>
+
+			<section>
+
+				<hr />
+
+				<h3>Blog</h3>
+
+				<hr />
+
+				<br />
+
+				{% collection "blog" %}
+
+				  {% for post in collection.items %}
+				  	<small>{{ post.date }}</small>
+				    <p><a href="{{ post.slug }}"> {{ post.title }}</a></p>
+				  {% endfor %}
+
+				{% endcollection %}
+
+			</section>
+
+	</div>
+
+{% endblock %}

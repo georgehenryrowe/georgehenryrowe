@@ -1,0 +1,53 @@
+---
+title: "Room 5a death"
+published: true
+slug: /5a
+tags: ["blood"]
+layout: adventure
+---
+
+<style>
+
+	body {
+		background:url(/public/images/static.gif)no-repeat center center fixed;
+		background-size: cover;
+	}
+	
+	#content {
+		background:url(/public/images/static.gif)no-repeat center center fixed;
+		background-size: cover;
+		height: 100%;
+	}
+
+	#blood {
+		-webkit-animation: bloodSplat 1 backwards;
+		-webkit-animation-delay:2s; 
+		height: 1000px;
+		background:url(/public/images/blood.png)no-repeat center center fixed;
+	}
+
+	@-webkit-keyframes bloodSplat {
+	0%   {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+</style>
+
+	<div id="blood">
+	</div>
+
+<div>
+
+<script>
+	var sound = new Howl({
+	urls: ['../public/sounds/static.mp3'],
+	loop: true,
+	volume: 0.1,
+	}).play();
+	
+	setTimeout(function (){	
+		var sound2 = new Howl({
+		urls: ['../public/sounds/splat2.mp3']
+		}).play();
+	}, 1000);
+</script>

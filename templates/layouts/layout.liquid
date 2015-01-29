@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}George Henry Rowe | Digital Producer, Web Design, other{% endblock %}</title>
+        {{ "style.css" | asset_url | stylesheet_tag }}
+        {{ "scripts.js" | asset_url | script_tag }}
+        <!-- TODO: OOCSS-ify the custom styles and break up the base into smaller modules :) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
+    <body>
+        {% include "header" %}
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+        {% include "footer" %}
+    </body>
+</html>

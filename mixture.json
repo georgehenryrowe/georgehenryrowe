@@ -1,0 +1,44 @@
+{
+    "debug": false,
+    "lintScripts": false,
+    "preprocessorLocations": [
+        "public"
+    ],
+    "preprocessorScriptOutput": "public/scripts",
+    "preprocessorStyleOutput": "public/styles",
+    "projectName": "George Henry Rowe",
+    "projectDescription": "My website yo.",
+    "publishedId": null,
+    "serverHostname": null,
+    "serverPort": null,
+    "templateDirectory": "templates",
+    "templateDefaultLayout": "layout",
+    "templateDefaultPage": "index",
+    "type": "mixture",
+    "useCompass": false,
+    "simpleModePartnerServer": null,
+    "simpleModeFileTypes": null,
+    "modelSource": null,
+    "domain": null,
+    "followLeader": false,
+    "routes": null,
+    "customRuby": false,
+    "customRubyPath": null,
+    "remoteDebugPort": 0,
+    "optimiseImages": true,
+    "password": null,
+    "ignoreDir": [
+        "ignore"
+    ],
+    "customTodos": null,
+    "autoPrefixer": null,
+    "sass": null,
+    "sitemap": false,
+    "less": null,
+    "optimiseSVG": true,
+    "convertHtml": {
+        "extension": ".html",
+        "path": null,
+        "relativePaths": true
+    }
+}

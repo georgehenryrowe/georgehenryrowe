@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>George Henry Rowe | Digital Producer, Web Design, other</title>
+        <link href="public/styles/style.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <script src="public/scripts/scripts.min.js"></script>
+        <!-- TODO: OOCSS-ify the custom styles and break up the base into smaller modules :) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
+    <body>
+        <header id="ghrhead">
+	<div id="topbar">
+		<hgroup>
+			<h1 class="desktoplogo"><a href="index.html">George Henry Rowe</a></h1>
+			<h1 class="mobilelogo"><a href="index.html">GHR</a></h1>
+		</hgroup>
+
+		<div class="mainmenu">
+			<nav>
+				<ul>
+					<li><a href="work.html" class="work">Work</a></li>
+					<li><a href="panto.html" class="panto">Panto</a></li>
+					<li><a href="blog.html" class="blog">Blog</a></li>
+					<li><a href="mailto:&#103;&#101;&#111;&#114;&#103;&#101;&#104;&#101;&#110;&#114;&#121;&#114;&#111;&#119;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="mobilemenu">
+
+			<a href="#" id="trigger-overlay" class="fa fa-bars"></a>
+
+			<div class="overlay overlay-hugeinc">
+				<button type="button" class="overlay-close">Close</button>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="work.html">Work</a></li>
+						<li><a href="panto.html">Panto</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="mailto:&#103;&#101;&#111;&#114;&#103;&#101;&#104;&#101;&#110;&#114;&#121;&#114;&#111;&#119;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" class="contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+		<script src="../public/scripts/libs/modernizr.custom.js"></script>
+		<script src="../public/scripts/libs/classie.min.js"></script>
+		<script src="../public/scripts/libs/demo1.min.js"></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</header>
+        <div id="content">
+            
+	<div>
+			<section>
+
+				<a name="type"></a>
+
+				<p>Hi, how you doing?</p>
+
+				<p>My name is George and I am a digital producer at <a href="http://www.aardman.com/">Aardman Animations</a>, making games and other cool digital things for a whole host of attractive clients. You can see some of the projects I have been involved with in the <a href="work.html">work</a> section of this site.</p>
+
+				<p>I also dabble incompetently in web design, mostly for my own fun but sometimes for money. You can see some of the sites I have made in the <a href="work.html">work</a> section as well, because I don't have much imagination. I am going to write about a few things I have learned in the <a href="blog.html">blog</a> section.</p>
+
+				<p>I also write and direct a pantomime in Bristol every year, which you can see on the <a href="panto.html">panto</a> page. I used to write quite a lot of things, and am going to add some old and new stuff (probably slowly) to the <a href="blog.html">blog</a>.</p>
+				
+				<br />
+
+			</section>
+		</div>
+
+        </div>
+        <footer id="ghrfooter">
+
+	<small><a href="http://www.twitter.com">Twitter</a> &nbsp;|&nbsp; <a href="http://instagram.com/georgehenryrowe">Instagram</a> &nbsp;|&nbsp; <a href="http://www.linkedin.com/pub/george-rowe/34/ab1/23b">LinkedIn</a></small><br />
+
+	<small>© 2014 GHR. Made with <a href="http://responsablecss.com/">ResponsableCSS</a> framework in <a href="http://sass-lang.com/">SASS</a> and compiled with <a href="http://mixture.io/">Mixture</a></small>.
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-38235964-1', 'georgehenryrowe.co.uk');
+	  ga('send', 'pageview');
+
+	</script>
+
+	<script>
+		$(function(){
+		  $('a').each(function() {
+		    if ($(this).prop('href') == window.location.href) {
+		      $(this).addClass('current');
+		    }
+		  });
+		});
+		</script>
+
+</footer>
+    </body>
+</html>

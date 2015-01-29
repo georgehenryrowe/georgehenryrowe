@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}George Henry Rowe | A Choose Your Own Adventure{% endblock %}</title>
+        {{ "style.css" | asset_url | stylesheet_tag }}
+        {{ "scripts.js" | asset_url | script_tag }}
+        <!-- TODO: OOCSS-ify the custom styles and break up the base into smaller modules :) -->
+        <script src="../public/scripts/libs/typingtext.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
+
+    <style>
+
+
+        body {
+            background-color: #000;
+        }
+        #content {
+            background: none;
+            background-color: #000;
+        }
+
+        h3,p,.typewriter {
+            color: #fff;
+        }
+
+    </style>
+
+
+    <body>
+
+            <div id="content">
+
+                {% block content %}{% endblock %}
+
+            </div>
+
+    </body>
+</html>

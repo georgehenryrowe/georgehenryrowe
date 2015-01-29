@@ -1,0 +1,731 @@
+// *
+// * Responsable Grid System
+// *
+// * Setting up a responsive grid based on Semantic GS
+// *
+// * @author Abban Dunne http://abandon.ie
+// * @author James Wilson http://jimmynotjim.com
+// * @version 1.0
+// */
+
+// ==========================================================
+// = Site Variables                                         =
+// ==========================================================
+
+// Grid options =
+$gutter_width: 40px; // Your gutter width
+$columns: 12; // The amount of columns you want
+$max_width: 1008px; // Set a maximum width of the site
+
+// *
+// * Baseline
+// *
+// * Common settings for this:
+// *
+// * 100% for 16px font and 24px baseline.
+// *
+// * 75% for 12px font and 18px baseline.
+// *
+// *
+$baseline: 125%;
+
+// Font variables
+$body_color: #333;
+$heading_color: #111;
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+$body_family: "Inconsolata", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+$header_family: "Roboto", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+
+// Select colors
+$select: #78aace;
+$select_color: #fff;
+
+// Default Colors
+$grey_light: #ddd;
+$grey_regular: #ccc;
+$grey_dark: #575757;
+
+// Link colors
+$link: $grey_dark;
+
+$green: #6bac60;
+$colour1: #F08080;
+$colour2: #D8BFD8;
+$colour3: #3CB371;
+$colour4: #B0C4DE;
+$colour5: #191970;
+$colour6: #C71585;
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack
+@mixin clearfix(){
+	*zoom:1;
+
+	&:before,
+	&:after{
+	    content:"";
+	    display:table;
+	}
+	&:after{
+	    clear:both;
+	}
+}
+
+// ==========================================================
+// = Import normalize baseline and grid                     =
+// ==========================================================
+
+@import "normalize";
+@import "baseline";
+@import "grid";
+@import "style1";
+
+// ==========================================================
+// = Your custom styles go here                             =
+// ==========================================================
+
+header#ghrhead{
+	>div{
+		@include row();
+		hgroup{
+			@include column(12);
+			padding-top: 1.5em;
+			margin-bottom: 2px; // Figure out 2px weirdness with hgroups
+			width: auo;
+		}
+	}
+}
+
+.desktoplogo {
+	display: inline-block;
+}
+
+.mobilelogo {
+	display: none;
+}
+
+.mainmenu {
+	display:inline;
+	nav {
+		ul {
+		color:#fff;
+		list-style: none;
+		float: right;
+		margin-right: 20px;
+		padding-top: 1.5em;
+		}
+		li {
+			font-family: $header_family;
+			display: inline;
+			padding-left: 20px;
+			a {
+			color: #fff;
+			text-decoration: none;
+			&:hover,&:focus {
+				animation:none;
+				-webkit-animation:none;
+				border-bottom: 2px solid;
+			}
+			}
+		}
+	}
+}
+
+.mobilemenu {
+	display: none;
+}
+
+.current {
+	border-bottom: solid 2px;
+}
+
+#topbar {
+	position: fixed;
+	z-index: 20;
+	top:0;
+	background: $colour1;
+	max-width: none!important;
+	width: 100%;
+    animation: color-change-3 90s infinite;
+    -webkit-animation: color-change-3 90s infinite;
+	h1 {
+		font-family: $header_family;
+		width: auto;
+		font-size: 2rem;
+		color: #fff;
+		margin: 0;
+		padding: 0 0 30px 0;
+		a {
+			color:#fff;
+			text-decoration: none;
+			&:hover,&:focus {
+				animation:none;
+				-webkit-animation:none;
+			}
+		}
+	}
+	a.fa-bars {
+		color: #fff;
+		font-size: 1.8rem;
+		position: fixed;
+		padding: 3px 5px 2px 5px;
+		border: 3px solid #fff;
+		right:0;
+		margin: 30px 30px 0 0;
+		text-decoration: none;
+		&:hover,&:focus {
+			animation:none;
+			-webkit-animation:none;
+		}
+	}
+}
+
+h5 a {
+	text-decoration: none;
+}
+
+#column1 {
+	@include row();
+	@include column(6);
+}
+
+#column2 {
+	@include row();
+	@include column(5);
+	margin-left: 20px;
+}
+
+.column12 {
+	@include row();
+	@include column(12);
+}
+
+#work {
+	width: 84%!important;
+}
+
+/* .shape {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid black;
+	&:hover, &:focus {
+		animation: triangle-enlarge 2s linear;
+		-webkit-animation: triangle-enlarge 2s linear;
+	}
+} */
+
+footer {
+	@include column(8);
+	position: static;
+	bottom: 0;
+	width: 100%;
+	background: #111;
+	height: 80px;
+	small {
+		color: $grey_dark;
+	}
+}
+
+small {
+	margin-bottom: 100px;
+}
+
+a.contact {
+  border-radius: 40px;
+  padding: 16px 20px 20px 20px;
+  border: 3px solid $grey_dark;
+  &:hover,&:focus {
+  	color: #000!important;
+  	background-color: $grey_dark;
+  	// animation:none;
+  	// -webkit-animation:none;
+  }
+}
+
+.toTop {
+	margin-top: -10%;
+}
+
+
+/* COLOR ANIMATIONS */
+
+@keyframes color-change {
+	0%    {color: $colour1;}
+	20%   {color: $colour2;}
+	40%   {color: $colour3;}
+	60%   {color: $colour4;}
+	80%   {color: $colour5;}
+	100%  {color: $colour1;}
+}
+
+/* Webkit browsers (Safari and Chrome) */
+@-webkit-keyframes color-change {
+	0%    {color: $colour1;}
+	20%   {color: $colour2;}
+	40%   {color: $colour3;}
+	60%   {color: $colour4;}
+	80%   {color: $colour5;}
+	100%  {color: $colour1;}
+}
+
+/* UNDERLINE ANIMATION */
+
+/* @keyframes color-change-2
+{
+0%    {border-bottom: 1px solid #F00; color:#F00;}
+20%   {border-bottom: 1px solid #EFD82E; color:#EFD82E;}
+40%   {border-bottom: 1px solid #33D396; color:#33D396;}
+60%   {border-bottom: 1px solid #3469D1; color:#3469D1;}
+80%   {border-bottom: 1px solid #A936CE; color:#A936CE;}
+100%  {border-bottom: 1px solid #F00; color:#F00;}
+}
+
+@-webkit-keyframes color-change-2
+{
+0%    {border-bottom: 1px solid #F00; color:#F00;}
+20%   {border-bottom: 1px solid #EFD82E; color:#EFD82E;}
+40%   {border-bottom: 1px solid #33D396; color:#33D396;}
+60%   {border-bottom: 1px solid #3469D1; color:#3469D1;}
+80%   {border-bottom: 1px solid #A936CE; color:#A936CE;}
+100%  {border-bottom: 1px solid #F00; color:#F00;}
+} */
+
+@keyframes color-change-3
+{
+0%    {background: $colour1;}
+20%   {background: $colour2;}
+40%   {background: $colour3;}
+60%   {background: $colour4;}
+80%   {background: $colour5;}
+100%  {background: $colour1;}
+}
+
+@-webkit-keyframes color-change-3 /* Safari and Chrome */
+{
+0%    {background: $colour1;}
+20%   {background: $colour2;}
+40%   {background: $colour3;}
+60%   {background: $colour4;}
+80%   {background: $colour5;}
+100%  {background: $colour1;}
+}
+
+.fadeIn0s {
+	-webkit-animation: fadeIn 3s backwards;
+	animation: fadeIn 3s backwards;
+}
+
+.fadeIn1s {
+	-webkit-animation: fadeIn 3s 1s backwards;
+	animation: fadeIn 3s 1s backwards;
+}
+
+.fadeIn2s {
+	-webkit-animation: fadeIn 3s 2s backwards;
+	animation: fadeIn 3s 2s backwards;
+}
+
+.fadeIn3s {
+	-webkit-animation: fadeIn 3s 3s backwards;
+	animation: fadeIn 3s 3s backwards;
+}
+
+.fadeIn4s {
+	-webkit-animation: fadeIn 3s 4s backwards;
+	animation: fadeIn 3s 4s backwards;
+}
+
+.fadeIn5s {
+	-webkit-animation: fadeIn 3s 5s backwards;
+	animation: fadeIn 3s 5s backwards;
+}
+
+.fadeIn6s {
+	-webkit-animation: fadeIn 3s 6s backwards;
+	animation: fadeIn 3s 6s backwards;
+}
+
+.fadeIn7s {
+	-webkit-animation: fadeIn 3s 7s backwards;
+	animation: fadeIn 3s 7s backwards;
+}
+
+.fadeIn8s {
+	-webkit-animation: fadeIn 3s 8s backwards;
+	animation: fadeIn 3s 8s backwards;
+}
+
+.fadeIn9s {
+	-webkit-animation: fadeIn 3s 9s backwards;
+	animation: fadeIn 3s 9s backwards;
+}
+
+.fadeIn10s {
+	-webkit-animation: fadeIn 3s 10s backwards;
+	animation: fadeIn 3s 10s backwards;
+}
+
+.fadeIn11s {
+	-webkit-animation: fadeIn 3s 11s backwards;
+	animation: fadeIn 3s 11s backwards;
+}
+
+@-webkit-keyframes fadeIn {
+	0%   { opacity:0;}
+	100% { opacity:1;}
+}
+
+@keyframes fadeIn {
+	0%   { opacity:0;}
+	100% { opacity:1;}
+}
+
+.fadeInLongRed8s {
+	-webkit-animation: fadeInRed 8s forwards;
+	animation: fadeInRed 8s forwards;
+}
+
+@-webkit-keyframes fadeInRed {
+	0%   { opacity:0;}
+	50%	 { color:#fff;}
+	100% { color:#ff0000;opacity:1;}
+}
+
+@keyframes fadeInRed {
+	0%   { opacity:0;}
+	50%	 { color:#fff;}
+	100% { color:#ff0000;opacity:1;}
+}
+
+/* WORK ROLLOVERS
+
+#workballs {
+	margin: 0 0 20px 0;
+	display: none;
+}
+
+.work_image {
+	height:100px;
+	width:100px;
+	display:inline-block;
+	float:left;
+}
+
+.work_rollover .mask {
+	right:100px;
+	height:100px;
+	width:100px;
+	display: inline-block;
+	float: left;
+	position:relative;
+    border-radius: 50%;
+    opacity: 0.6;
+	-moz-transition:all 0.6s ease-in-out;
+	-webkit-transition:all 0.6s ease-in-out;
+	-o-transition:all 0.6s ease-in-out;
+	-ms-transition:all 0.6s ease-in-out;
+	transition:all 0.6s ease-in-out;
+}
+
+.maskcolour1 {
+   	border: 50px solid rgba(240, 128, 128, 1);
+}
+
+.maskcolour2 {
+   	border: 50px solid rgba(216, 191, 216, 1);
+}
+
+.maskcolour3 {
+	border: 50px solid rgba(60, 179, 113, 1);
+}
+
+.maskcolour4 {
+	border: 50px solid rgba(176, 196, 222, 1);
+}
+
+.work_rollover:hover .mask {
+   	border:0px solid rgba(0,0,0,0);
+} */
+
+.work_image {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+figure {
+    margin: 0;
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    backface-visibility: hidden;
+    transition: opacity 0.5s;
+	-webkit-animation: color-change-3 6s infinite;
+	animation: color-change-3 6s infinite;
+    &:hover, &:focus {
+    	opacity: 1;
+    }
+}
+
+.video_wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 40px;
+	height: 0;
+	margin-bottom: 40px;
+}
+.video_wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+figcaption h3 {
+	@include vertical-align;
+	font-family: $header_family;
+	font-style: normal;
+	font-size: 2em;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+#content{
+    background: url(../images/bg2.png)repeat;
+	>div{
+		@include row();
+		padding: 200px 0 5% 0;
+		>section{
+			@include column(8);
+		}
+		>aside{
+			@include column(4);
+			>div:last-child{
+				p{
+					margin-bottom:0;
+				}
+				div:last-child p{
+					margin-bottom: 1.5em;
+				}
+			}
+		}
+		>div{
+			clear:both;
+			>div{
+				@include column(12);
+			}
+			section{
+				background:#ccc;
+				div{
+					background: $green;
+					height: 3em;
+					margin-bottom: 1.5em;
+					border: $gutter_width*0.5 solid #ddd;
+					border-top:0;
+					border-bottom:0;
+				}
+			}
+			section#one,
+			section#two,
+			section#three,
+			section#four,
+			section#five,
+			section#six,
+			section#seven,
+			section#eight,
+			section#nine,
+			section#ten,
+			section#eleven{
+				div:last-child{
+					background:#eee;
+				}
+			}
+			section#one{
+				>div:first-child{@include column(1);}
+				>div:last-child{@include column(11);}
+			}
+			section#two{
+				>div:first-child{@include column(2);}
+				>div:last-child{@include column(10);}
+			}
+			section#three{
+				>div:first-child{@include column(3);}
+				>div:last-child{@include column(9);}
+			}
+			section#four{
+				>div:first-child{@include column(4);}
+				>div:last-child{@include column(8);}
+			}
+			section#five{
+				>div:first-child{@include column(5);}
+				>div:last-child{@include column(7);}
+			}
+			section#six{
+				>div:first-child{@include column(6);}
+				>div:last-child{@include column(6);}
+			}
+			section#seven{
+				>div:first-child{@include column(7);}
+				>div:last-child{@include column(5);}
+			}
+			section#eight{
+				>div:first-child{@include column(8);}
+				>div:last-child{@include column(4);}
+			}
+			section#nine{
+				>div:first-child{@include column(9);}
+				>div:last-child{@include column(3);}
+			}
+			section#ten{
+				>div:first-child{@include column(10);}
+				>div:last-child{@include column(2);}
+			}
+			section#eleven{
+				>div:first-child{@include column(11);}
+				>div:last-child{@include column(1);}
+			}
+			section#thirds{
+				>div{@include column(4);}
+			}
+			section#quarters{
+				>div{@include column(3);}
+			}
+			section#sixths{
+				>div{@include column(2);}
+			}
+			section#twelfths{
+				>div{@include column(1);}
+			}
+		}
+	}
+}
+
+
+/**
+ * NOTE
+ * Don't add breakpoints aimed at device pixel widths,
+ * add them where they suit best for your design.
+ */
+@media screen and (max-width: 750px){
+	.mainmenu {
+		display:none;
+	}
+	.mobilemenu {
+		display: inline;
+		.current {
+		border-bottom: none!important;
+	} }
+
+	#work {
+	width: 100%!important;
+	}
+	#column1 {
+	@include row();
+	@include column(12);
+	}
+
+	#column2 {
+	@include row();
+	@include column(12);
+	}
+	#content{
+		>div{
+			>section{
+				@include column(12);
+			}
+			>aside{
+				@include column(12, 0);
+				>h2{
+					@include column(12);
+					padding-top: 0.25em;
+				    margin-bottom: 0.5em;
+				}
+				div#lists{
+					>div{
+						@include column(4);
+					}
+					ul, ol{
+						padding-left: 10%;
+					}
+				}
+				>div:last-child{
+					@include column(12, 0);
+					>h2{
+						@include column(12);
+						padding-top: 0.25em;
+					    margin-bottom: 0.5em;
+					}
+					>div{
+						@include column(6);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 520px){
+	.desktoplogo {
+	display: none;
+	}
+
+	.mobilelogo {
+	display: block;
+	}
+	#content{
+		>div{
+			>aside{
+				div#lists{
+					>div{
+						@include column(12);
+					}
+				}
+				>div:last-child{
+					>h2{
+						@include column(12);
+						padding-top: 0.25em;
+					    margin-bottom: 0.5em;
+					}
+					>div{
+						@include column(12);
+					}
+					p{
+						margin-bottom:0;
+					}
+					div:last-child p{
+						margin-bottom: 1.5em;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1017px){
+	#workballs {
+		display: block;
+	}
+}

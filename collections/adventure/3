@@ -1,0 +1,73 @@
+---
+title: "Room 3"
+published: true
+slug: /3
+tags: ["static"]
+layout: adventure
+---
+
+<style>
+
+	body {
+		background:url(/public/images/static.gif)
+	}
+	#content {
+		background:url(/public/images/static.gif)
+	}
+	p.exclaim {
+		-webkit-animation: changeToBlack 5s ease-in-out!important;
+		animation: changeToBlack 5s ease-in-out !important;
+		-webkit-animation-fill-mode: forwards!important;
+	}
+	p {
+		color: #111;
+	}
+	#hidden {
+		display: none;
+		-webkit-animation: changeToBlack 2s;
+	}
+
+	@-webkit-keyframes changeToWhite {
+		0%   { background-color: #000; }
+		100% { background-color: #888; }
+	}
+
+	@keyframes changeToWhite {
+		0%   { background-color: #000; }
+		100% { background-color: #888; }
+	}	
+
+	@-webkit-keyframes changeToBlack {
+		0%   { opacity:0;color: #fff; }
+		100% { opacity:1;color: #111; }
+	}
+
+	@keyframes changeToBlack {
+		0%   { opacity:0;color: #fff; }
+		100% { opacity:1;color: #111; }
+	}
+
+</style>
+
+
+<div>
+
+	<section>
+
+		<img src="/public/images/static.gif" id="hidden">
+
+		<div id="typewriter">
+			
+			<p>You look around you, aghast at the strange location and the drilling in your head. All the screens are smashed, blood is pooled around you, everything stinks, everything HURTS.</p>
+
+			<p>Something is badly, dreadfully wrong.</p>
+
+			<p>You notice one monitor is <a href="#" a href="#" onclick="toggle_visibility('hidden');">still flickering</a>. Do you want to <a href="/adventure/3">have a closer look</a>, or <a href="#">close your eyes again</a>?</p>
+
+		</div>
+
+</div>
+
+	</section>
+
+	{% include "typewriter" %}
