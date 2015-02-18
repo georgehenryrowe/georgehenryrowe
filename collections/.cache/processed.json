@@ -36,35 +36,37 @@
   "/collections/adventure/3.liquid": {
     "Prefix": "adventure",
     "Url": "/adventure/3",
+    "Date": "2014-05-31T18:48:50+01:00",
     "FilePath": "/collections/adventure/3.liquid",
-    "Date": "2014-04-17T13:46:28.5448479+01:00",
     "Published": true,
     "Meta": {
-      "slug": "/adventure/3",
       "title": "Room 3",
-      "layout": "adventure",
+      "published": true,
+      "slug": "/adventure/3",
       "tags": [
         "light"
       ],
-      "published": true,
-      "body": "<style>\r\n\tbody {\r\n\t\t-webkit-animation: changeToWhite 3s ease-in-out;\r\n\t\tanimation: changeToWhite 3s ease-in-out;\r\n\t\t-webkit-animation-fill-mode: forwards;\r\n\t}\r\n\t#content {\r\n\t\t-webkit-animation: changeToWhite 3s ease-in-out;\r\n\t\tanimation: changeToWhite 3s ease-in-out;\r\n\t\t-webkit-animation-fill-mode: forwards;\r\n\t}\r\n\tp {\r\n\t\tcolor: #111;\r\n\t}\r\n\t@-webkit-keyframes changeToWhite {\r\n\t\t0%   { background-color: #000; }\r\n\t\t100% { background-color: #888; }\r\n\t}\r\n\t@keyframes changeToWhite {\r\n\t\t0%   { background-color: #000; }\r\n\t\t100% { background-color: #888; }\r\n\t}\r\n</style>\r\n<div>\r\n\t<section>\r\n\t\t<div class=\"toTop\">\r\n\t\t\t<p class=\"fadeIn2s\">Oh God.</p>\r\n\t\t\t<p class=\"fadeIn4s\">The shattered remenants of a...spaceship? cockpit lay all around you. A cracked window displays what would be a beautiful desktop background: stars, swirling nebula, ringed planets. Below this a toolbar of destruction unfolds.</p>\r\n\t\t\t<p class=\"fadeIn7s\">Mangled steel, shattered glass. What isn't broken is covered in a viscous, dark blood. You examine your body, looking for wounds and trying to avoid looking at everything else. Not my blood, you think. Where am I? What the hell happened here? Whose blood is this? Why am I here?</p>\r\n\t\t\t<p class=\"fadeIn9s\">The existential uncertainty tumbles and scrabbles with the more pressing questions of the here and now, leaving no room for an emotional response. You notice a monitor still flickering in the corner, the last vestige of life in this dying room.</p>\r\n\t\t\t<p class=\"fadeIn11s\">Do you want to <a href=\"4a\">go over and look at the monitor</a>, or turn round and <a href=\"4b\">explore the rest of your strange location</a>?</p>\r\n\t\t</div>\r\n</div>\r\n\t</section>\r\n<script>\r\n\tvar sound = new Howl({\r\n\turls: ['../public/sounds/3.mp3']\r\n\t}).play();\r\n</script>"
+      "layout": "adventure",
+      "date": "2014-05-31T18:48:50+01:00",
+      "body": "\n\n<style>\n\n\tbody {\n\t\t-webkit-animation: changeToWhite 3s ease-in-out;\n\t\tanimation: changeToWhite 3s ease-in-out;\n\t\t-webkit-animation-fill-mode: forwards;\n\t}\n\n\t#content {\n\t\t-webkit-animation: changeToWhite 3s ease-in-out;\n\t\tanimation: changeToWhite 3s ease-in-out;\n\t\t-webkit-animation-fill-mode: forwards;\n\t}\n\n\tp {\n\t\tcolor: #111;\n\t}\n\n\t@-webkit-keyframes changeToWhite {\n\t\t0%   { background-color: #000; }\n\t\t100% { background-color: #888; }\n\t}\n\n\t@keyframes changeToWhite {\n\t\t0%   { background-color: #000; }\n\t\t100% { background-color: #888; }\n\t}\n\n</style>\n\n\n<div>\n\n\t<section>\n\n\t\t<div class=\"toTop\">\n\n\t\t\t<p class=\"fadeIn2s\">Oh God.</p>\n\n\t\t\t<p class=\"fadeIn4s\">The shattered remenants of a...spaceship? cockpit lay all around you. A cracked window displays what would be a beautiful desktop background: stars, swirling nebula, ringed planets. Below this a toolbar of destruction unfolds.</p>\n\n\t\t\t<p class=\"fadeIn7s\">Mangled steel, shattered glass. What isn't broken is covered in a viscous, dark blood. You examine your body, looking for wounds and trying to avoid looking at everything else. Not my blood, you think. Where am I? What the hell happened here? Whose <span style=\"color:darkred\">blood</span> is this?</p>\n\n\t\t\t<p class=\"fadeIn9s\">The uncertainty tumbles and scrabbles with the more pressing questions of the here and now, leaving no room for emotion...yet. You notice a monitor still flickering in the corner, the last vestige of life in this dead room.</p>\n\n\t\t\t<p class=\"fadeIn11s\">Do you want to <a href=\"4a\">go over and look at the monitor</a>, or turn round and <a href=\"4b\">explore the rest of your strange location</a>?</p>\n\n\t\t</div>\n\n</div>\n\n\t</section>\n\n<script>\n\tvar sound = new Howl({\n\turls: ['../public/sounds/3.mp3']\n\t}).play();\n</script>\n\n"
     }
   },
   "/collections/adventure/4a.liquid": {
     "Prefix": "adventure",
     "Url": "/adventure/4a",
+    "Date": "2014-06-26T22:39:33+01:00",
     "FilePath": "/collections/adventure/4a.liquid",
-    "Date": "2014-05-30T09:41:59.1172439+01:00",
     "Published": true,
     "Meta": {
-      "slug": "/adventure/4a",
       "title": "Room 4a",
-      "layout": "adventure",
+      "published": true,
+      "slug": "/adventure/4a",
       "tags": [
         "static"
       ],
-      "published": true,
-      "body": "<style type=\"text/css\">\r\n\tbody {\r\n\t\tbackground:url(/public/images/static.gif)no-repeat center center fixed;\r\n\t\tbackground-size: cover;\r\n\t}\r\n\t#content {\r\n\t\tbackground:url(/public/images/static.gif)no-repeat center center fixed;\r\n\t\tbackground-size: cover;\r\n\t\theight: 100%;\r\n\t}\r\n\tp {\r\n\t\tcolor: #000;\r\n\t\tpadding: 0 10px 0 10px;\r\n\t}\r\n\t.toTop {\r\n\t\tbackground-color: rgba(255,255,255,0.8);\r\n\t}\r\n</style>\r\n<div>\r\n\t<section>\r\n\t\t<div class=\"toTop fadeIn1s\">\r\n\t\t<p class=\"fadeIn2s\">You shift your ailing body over to the monitor, carefully avoiding anything sticky or the many menacing electrical discharges spouting from consoles.</p>\r\n\t\t<p class=\"fadeIn4s\">Branded on top of screen are the words \"Ventico ShortRange: 0 - 500\". You think you glimpse a frame of information in the garbled output.</p>\r\n\t\t<p class=\"fadeIn6s\">[Stare deeply into the static for 5 seconds]</p>\r\n\t\t<p class=\"fadeIn11s\">If you think you can see something, <a href=\"5a\">examine it further</a> or if you don't see anything, <a href=\"5b\">move away from the screen</a>\r\n\t\t</div>\r\n</div>\r\n\t</section>\r\n<script>\r\n\tvar sound = new Howl({\r\n\turls: ['../public/sounds/static.mp3'],\r\n\tloop: true,\r\n\tvolume: 0.1,\r\n\t}).play();\r\n</script>"
+      "layout": "adventure",
+      "date": "2014-06-26T22:39:33+01:00",
+      "body": "\n\n<style type=\"text/css\">\n\n\tbody {\n\t\tbackground:url(/public/images/static.gif)no-repeat center center fixed;\n\t\tbackground-size: cover;\n\t}\n\n\t#content {\n\t\tbackground:url(/public/images/static.gif)no-repeat center center fixed;\n\t\tbackground-size: cover;\n\t\theight: 100%;\n\t}\n\n\tp {\n\t\tcolor: #000;\n\t\tpadding: 0 10px 0 10px;\n\t}\n\n\t.toTop {\n\t\tbackground-color: rgba(255,255,255,0.8);\n\t}\n\n\n\n</style>\n\n<div>\n\n\t<section>\n\n\t\t<div class=\"toTop fadeIn1s\">\n\n\t\t<p class=\"fadeIn2s\">You shift your ailing body over to the monitor, carefully avoiding anything sticky or the many menacing electrical discharges spouting from consoles.</p>\n\n\t\t<p class=\"fadeIn4s\">Branded on top of screen are the words \"Ventico ShortRange: 0 - 500\". You think you glimpse a frame of information in the garbled output.</p>\n\n\t\t<p class=\"fadeIn6s\">[Stare deeply into the static for 5 seconds]</p>\n\n\t\t<p class=\"fadeIn11s\"><a href=\"5a\">Is that...can you make something our there, can I...</a>\n\n\t\t</div>\n\n</div>\n\n\t</section>\n\n<script>\n\tvar sound = new Howl({\n\turls: ['../public/sounds/static.mp3'],\n\tloop: true,\n\tvolume: 0.1,\n\t}).play();\n</script>"
     }
   },
   "/collections/blog/18-03-14.liquid": {
@@ -121,18 +123,19 @@
   "/collections/adventure/5a.liquid": {
     "Prefix": "adventure",
     "Url": "/adventure/5a",
+    "Date": "2014-06-27T13:49:40+01:00",
     "FilePath": "/collections/adventure/5a.liquid",
-    "Date": "2014-06-01T17:48:17.6444483+01:00",
     "Published": true,
     "Meta": {
-      "slug": "/adventure/5a",
       "title": "Room 5a death",
-      "layout": "adventure",
+      "published": true,
+      "slug": "/adventure/5a",
       "tags": [
         "blood"
       ],
-      "published": true,
-      "body": "<style>\r\n\tbody {\r\n\t\tbackground:url(/public/images/static.gif)no-repeat center center fixed;\r\n\t\tbackground-size: cover;\r\n\t}\r\n\t#content {\r\n\t\tbackground:url(/public/images/static.gif)no-repeat center center fixed;\r\n\t\tbackground-size: cover;\r\n\t\theight: 100%;\r\n\t}\r\n\t#blood {\r\n\t\t-webkit-animation: bloodSplat 1 backwards;\r\n\t\t-webkit-animation-delay:2s; \r\n\t\theight: 1000px;\r\n\t\tbackground:url(/public/images/blood.png)no-repeat center center fixed;\r\n\t}\r\n\t@-webkit-keyframes bloodSplat {\r\n\t0%   {opacity: 0;}\r\n\t100% {opacity: 1;}\r\n}\r\n</style>\r\n\t<div id=\"blood\">\r\n\t</div>\r\n<div>\r\n<script>\r\n\tvar sound = new Howl({\r\n\turls: ['../public/sounds/static.mp3'],\r\n\tloop: true,\r\n\tvolume: 0.1,\r\n\t}).play();\r\n\tsetTimeout(function (){\t\r\n\t\tvar sound2 = new Howl({\r\n\t\turls: ['../public/sounds/splat2.mp3']\r\n\t\t}).play();\r\n\t}, 1000);\r\n</script>"
+      "layout": "adventure",
+      "date": "2014-06-27T13:49:40+01:00",
+      "body": "\n\n<style>\n\n\tbody {\n\t\tbackground:url(/public/images/static.gif)no-repeat center center fixed;\n\t\tbackground-size: cover;\n\t}\n\n\t#content {\n\t\tbackground:url(/public/images/static.gif)no-repeat center center fixed;\n\t\tbackground-size: cover;\n\t\theight: 100%;\n\t}\n\n\t#blood {\n\t\t-webkit-animation: bloodSplat 1 backwards;\n\t\t-webkit-animation-delay:5s;\n\t\theight: 1000px;\n\t\tbackground:url(/public/images/blood.png)no-repeat center center fixed;\n\t}\n\n\t@-webkit-keyframes bloodSplat {\n\t0%   {opacity: 0;}\n\t100% {opacity: 1;}\n}\n\n</style>\n\n<div>\n\n\t<section>\n\n\t\t<div id=\"blood\">\n\t\t</div>\n\n\t\t<div class=\"toTop\">\n\n\t\t\t<p class=\"fadeIn2s\">...can you see something in the static?</p>\n\n<script>\n\tvar sound = new Howl({\n\turls: ['../public/sounds/static.mp3'],\n\tloop: true,\n\tvolume: 0.1,\n\t}).play();\n\n\tsetTimeout(function (){\n\t\tvar sound2 = new Howl({\n\t\turls: ['../public/sounds/splat2.mp3']\n\t\t}).play();\n\t}, 5000);\n</script>\n"
     }
   },
   "/collections/blog/29-01-14.liquid": {
@@ -149,7 +152,25 @@
         "games"
       ],
       "date": "2015-01-29T20:59:15+00:00",
-      "body": "\n\n<div>\n\t<section>\n\t\t<hr />\n\t\t<h3>Easter Eggs in games: What, Why, but really Why?</h3>\n\t\t<hr />\n\t\t<br />\n\n\t\t<p>Last October my esteemed colleague <a href=\"http://www.twitter.com/efergan\">Daniel Efergan</a> and myself gave a talk about Easter Eggs in video games at the very excellent <a href=\"http://thisisplayful.com\">Playful 2014</a> conference in London.</p>\n\n\t\t<div class=\"video_wrapper\">\n\n\t\t\t<iframe src=\"//player.vimeo.com/video/113086493?color=ffffff&byline=0&portrait=0\" width=\"800\" height=\"450\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\n\n\t\t</div>\n\n\t\t<p>The theme of the conference was 'Hidden', and the organisers from <a href=\"http://wearemudlark.com/\">Mudlark</a> asked us to talk about something personal to us; they didn't want some thinly veiled product placement (and neither did we). Dan and I both grew up playing and still play a lot of games, so the idea of hidden things instantly made us think of Easter Eggs.</p>\n\n\t\t<p>After defining between ourselves that Easter Eggs in the context of games are something hidden that falls outside of the normal rule set of a game (i.e. doesn't necessarily reward or progress the player), we originally thought we would be talking all about game developers and ego. People obviously want to make a mark on the world, especialy a world that they have created. However, after thinking and talking about it every Wednesday lunchtime at <a href=\"http://www.spikeisland.org.uk/\">Spike Island</a> for two months, that had shifted quite a lot.</p>\n\n\t\t<p>We came to believe that although this is true, it is actually a much more interesting emotional response that the joy Easter Eggs elicit comes from. The reason devlopers create them and the reason people feel so much joy in uncovering them is based on our own desires to break out of the rules set we ourselves currently inhabit.</p>\n\n\t\t<p>We may have gone to wanky and deep, but watch the talk, see what you think.</p>\n\n\t</section>\n</div>"
+      "body": "\n\n<div>\n\t<section>\n\t\t<hr />\n\t\t<h3>Easter Eggs in games: What, Why, but really Why?</h3>\n\t\t<hr />\n\t\t<br />\n\n\t\t<p>Last October my esteemed colleague <a href=\"http://www.twitter.com/efergan\">Daniel Efergan</a> and myself gave a talk about Easter Eggs in video games at the very excellent <a href=\"http://thisisplayful.com\">Playful 2014</a> conference in London.</p>\n\n\t\t<div class=\"video_wrapper\">\n\n\t\t\t<iframe src=\"//player.vimeo.com/video/113086493?color=ffffff&byline=0&portrait=0\" width=\"800\" height=\"450\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\n\n\t\t</div>\n\n\t\t<p>The theme of the conference was 'Hidden', and the organisers from <a href=\"http://wearemudlark.com/\">Mudlark</a> asked us to talk about something personal to us; they didn't want some thinly veiled product placement (and neither did we). Dan and I both grew up playing and still play a lot of games, so the idea of hidden things instantly made us think of Easter Eggs.</p>\n\n\t\t<p>After defining between ourselves that Easter Eggs in the context of games are something hidden that falls outside of the normal rule set of a game (i.e. doesn't necessarily reward or progress the player), we originally thought we would be talking all about game developers and ego. People want to make a mark on the world, especialy a world that they have created. However, after thinking and talking about it every Wednesday lunchtime at <a href=\"http://www.spikeisland.org.uk/\">Spike Island</a> for two months, that had shifted quite a lot.</p>\n\n\t\t<p>We came to believe that although this is true, it is actually a much more interesting emotional response the joy Easter Eggs elicit is based on. The reason developers create them and the reason people feel so much joy in finding them is based on our own desires to break out of the rule set we ourselves currently inhabit.</p>\n\n\t\t<p>We may have gone to wanky and deep, but watch the talk, see what you think.</p>\n\n\t</section>\n</div>"
+    }
+  },
+  "/collections/adventure/4b.liquid": {
+    "Prefix": "adventure",
+    "Url": "/adventure/4b",
+    "Date": "2015-02-17T21:47:11+00:00",
+    "FilePath": "/collections/adventure/4b.liquid",
+    "Published": true,
+    "Meta": {
+      "title": "Room 4b",
+      "published": true,
+      "slug": "/adventure/4b",
+      "tags": [
+        "light"
+      ],
+      "layout": "adventure",
+      "date": "2015-02-17T21:47:11+00:00",
+      "body": "\n\n<style>\n\n\tbody {\n\t\tbackground-color: #888;\n\t}\n\n\t#content {\n\t\tbackground-color: #888;\n\t}\n\n\tp {\n\t\tcolor: #111;\n\t}\n\n\t.blink {\n\t\ttext-decoration: blink!important;\n\t}\n\n\t/*@-webkit-keyframes changeToWhite {\n\t\t0%   { background-color: #000; }\n\t\t100% { background-color: #888; }\n\t}\n\n\t@keyframes changeToWhite {\n\t\t0%   { background-color: #000; }\n\t\t100% { background-color: #888; }\n\t}*/\n\n</style>\n\n\n<div>\n\n\t<section>\n\n\t\t<div class=\"toTop\">\n\n\t\t\t<p class=\"fadeIn2s\">You walk away from the blinking of the monitor, through the devestation, towards what you presume must be the exit of the cockpit.</p>\n\n\t\t\t<p class=\"fadeIn4s\">The metal portal at the end is the seemingly the only intact thing in the room. Your weight pressing against it yields nothing.</p>\n\n\t\t\t<p class=\"fadeIn6s\">Disappointed, you start to turn...Is disappointment the first emotion you have felt since waking up? It seems strange that in a scene of horror and unimaginable violence, the disappointment of an steadfast door is what has first piqued inside you.</p>\n\n\t\t\t<p class=\"fadeIn10s\">Pondering this strange malaise in your emotions, you walk toward the <span class=\"blink\"><a href=\"4a\">flickering monitor in the far corner</a></span>.</p>\n\n\t\t</div>\n\n</div>\n\n\t</section>\n\n<script>\n\tvar sound = new Howl({\n\turls: ['../public/sounds/3.mp3']\n\t}).play();\n</script>\n\n"
     }
   }
 }

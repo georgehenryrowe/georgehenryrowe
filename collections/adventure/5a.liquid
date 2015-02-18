@@ -12,7 +12,7 @@ layout: adventure
 		background:url(/public/images/static.gif)no-repeat center center fixed;
 		background-size: cover;
 	}
-	
+
 	#content {
 		background:url(/public/images/static.gif)no-repeat center center fixed;
 		background-size: cover;
@@ -21,7 +21,7 @@ layout: adventure
 
 	#blood {
 		-webkit-animation: bloodSplat 1 backwards;
-		-webkit-animation-delay:2s; 
+		-webkit-animation-delay:5s;
 		height: 1000px;
 		background:url(/public/images/blood.png)no-repeat center center fixed;
 	}
@@ -33,10 +33,16 @@ layout: adventure
 
 </style>
 
-	<div id="blood">
-	</div>
-
 <div>
+
+	<section>
+
+		<div id="blood">
+		</div>
+
+		<div class="toTop">
+
+			<p class="fadeIn2s">...can you see something in the static?</p>
 
 <script>
 	var sound = new Howl({
@@ -44,10 +50,10 @@ layout: adventure
 	loop: true,
 	volume: 0.1,
 	}).play();
-	
-	setTimeout(function (){	
+
+	setTimeout(function (){
 		var sound2 = new Howl({
 		urls: ['../public/sounds/splat2.mp3']
 		}).play();
-	}, 1000);
+	}, 5000);
 </script>
