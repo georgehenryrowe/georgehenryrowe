@@ -27,7 +27,7 @@ $max_width: 1008px; // Set a maximum width of the site
 // * 75% for 12px font and 18px baseline.
 // *
 // *
-$baseline: 125%;
+$baseline: 100%;
 
 // Font variables
 $body_color: #333;
@@ -115,6 +115,7 @@ header#ghrhead{
 		float: right;
 		margin-right: 20px;
 		padding-top: 1.5em;
+		font-size: 125%;
 		}
 		li {
 			font-family: $header_family;
@@ -220,13 +221,15 @@ h5 a {
 
 footer {
 	@include column(8);
-	position: static;
-	bottom: 0;
+	// position: absolute;
+	// bottom: 0;
+	// left: 0;
+	// right: 0;
+	height: 40px;
 	width: 100%;
 	background: #111;
-	height: 80px;
-	small {
-		color: $grey_dark;
+	small, a {
+		color: #bbb;
 	}
 }
 
@@ -248,6 +251,13 @@ a.contact {
 
 .toTop {
 	margin-top: -10%;
+}
+
+.pullOut {
+	font-style: italic;
+	color: $colour1;
+    animation: color-change 90s infinite;
+    -webkit-animation: color-change 90s infinite;
 }
 
 
@@ -451,11 +461,11 @@ a.contact {
    	border:0px solid rgba(0,0,0,0);
 } */
 
-.work_image {
+/* .work_image {
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
-}
+} */
 
 figure {
     margin: 0;
@@ -495,6 +505,38 @@ figcaption {
 	height: 100%;
 }
 
+.rainbow {
+	text-align: center;
+}
+
+p.red::selection {
+	color:red;
+	background: none!important;
+}
+p.yellow::selection {
+	color:yellow;
+	background: none!important;
+}
+p.pink::selection {
+	color:pink;
+	background: none!important;
+}
+p.green::selection {
+	color:green;
+	background: none!important;
+}
+p.purple::selection {
+	color:purple;
+	background: none!important;
+}
+p.orange::selection{
+	color:orange;
+	background: none!important;
+}
+p.blue::selection {
+	color:blue;
+	background: none!important;
+}
 
 @mixin vertical-align {
   position: relative;
@@ -515,7 +557,8 @@ figcaption h3 {
 }
 
 #content{
-    background: url(../images/bg2.png)repeat;
+    background: url(../images/bg3.png)repeat;
+    min-height: 840px;
 	>div{
 		@include row();
 		padding: 200px 0 5% 0;
@@ -623,7 +666,6 @@ figcaption h3 {
 		}
 	}
 }
-
 
 /**
  * NOTE
