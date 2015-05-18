@@ -1155,33 +1155,32 @@ figcaption {
 .rainbow {
   text-align: center; }
 
-p.red::selection {
-  color: red;
+.rainbow p::selection, .rainbow span::selection {
   background: none !important; }
+.rainbow p {
+  padding: none;
+  margin: 10px; }
 
-p.yellow::selection {
-  color: yellow;
-  background: none !important; }
+span.red::selection {
+  color: red; }
 
-p.pink::selection {
-  color: pink;
-  background: none !important; }
+span.yellow::selection {
+  color: yellow; }
 
-p.green::selection {
-  color: green;
-  background: none !important; }
+span.pink::selection {
+  color: pink; }
 
-p.purple::selection {
-  color: purple;
-  background: none !important; }
+span.green::selection {
+  color: green; }
 
-p.orange::selection {
-  color: orange;
-  background: none !important; }
+span.purple::selection {
+  color: purple; }
 
-p.blue::selection {
-  color: blue;
-  background: none !important; }
+span.orange::selection {
+  color: orange; }
+
+span.blue::selection {
+  color: blue; }
 
 figcaption h3 {
   position: relative;
