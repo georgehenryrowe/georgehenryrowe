@@ -1156,7 +1156,7 @@ figcaption {
   text-align: center; }
 
 .rainbow p::selection, .rainbow span::selection {
-  background: none !important; }
+  background: #8DEEEE; }
 .rainbow p {
   padding: none;
   margin: 10px; }
