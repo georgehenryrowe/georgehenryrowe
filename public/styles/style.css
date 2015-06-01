@@ -1162,25 +1162,26 @@ figcaption {
   margin: 10px; }
 
 span.red::selection {
-  color: red; }
+  background-color: red; }
 
 span.yellow::selection {
-  color: yellow; }
+  background-color: yellow;
+  color: black; }
 
 span.pink::selection {
-  color: pink; }
+  background-color: pink; }
 
 span.green::selection {
-  color: green; }
+  background-color: green; }
 
 span.purple::selection {
-  color: purple; }
+  background-color: purple; }
 
 span.orange::selection {
-  color: orange; }
+  background-color: orange; }
 
 span.blue::selection {
-  color: blue; }
+  background-color: blue; }
 
 figcaption h3 {
   position: relative;
