@@ -67,8 +67,8 @@ body{
 a{
 	color:$link;
 	&:hover, &:focus {
-        animation: color-change 6s infinite;
-        -webkit-animation: color-change 6s infinite;
+        text-decoration: none;
+        font-weight: 700;
         }
 }
 
