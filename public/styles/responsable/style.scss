@@ -12,6 +12,8 @@
 // = Site Variables                                         =
 // ==========================================================
 
+@charset "UTF-8";
+
 // Grid options =
 $gutter_width: 40px; // Your gutter width
 $columns: 12; // The amount of columns you want
@@ -33,11 +35,11 @@ $baseline: 100%;
 $body_color: #333;
 $heading_color: #111;
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:700);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:700);
 
-$body_family: "Inconsolata", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
-$header_family: "Roboto", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+$body_family: "Roboto", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+$header_family: "Inconsolata", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
 
 // Select colors
 $select: #78aace;
@@ -79,7 +81,7 @@ $colour6: #C71585;
 
 @import "normalize";
 @import "baseline";
-@import "grid";
+@import 'grid';
 @import "style1";
 
 // ==========================================================

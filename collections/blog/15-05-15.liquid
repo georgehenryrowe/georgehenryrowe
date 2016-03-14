@@ -67,17 +67,17 @@ tags: ["games"]
 
 			<p><li>The live <b>build</b> of your game will be comprised to three elements:</p></li>
 
-				<ul>
+				<ol>
 
-				<p>o <b>HTML: </b>this is the actual nodes on the page, the building blocks on any webpage. In a Phaser game this will be a &lt;canvas&gt; element with a width and a height, which is a lump of plain graphics data of that size. You might add other HTML things over the top if you like: text forms, alerts, etc. This what people are referring to when they talk about the <b>DOM </b>(Document Object Model). In BBC games, things like the ‘Rotate your Device’ message have to be HTML. You can create whole games in the DOM, using just HTML and CSS, but that is generally if you need to support something weird.</p>
+				<p><li><b>HTML: </b>this is the actual nodes on the page, the building blocks on any webpage. In a Phaser game this will be a &lt;canvas&gt; element with a width and a height, which is a lump of plain graphics data of that size. You might add other HTML things over the top if you like: text forms, alerts, etc. This what people are referring to when they talk about the <b>DOM </b>(Document Object Model). In BBC games, things like the ‘Rotate your Device’ message have to be HTML. You can create whole games in the DOM, using just HTML and CSS, but that is generally if you need to support something weird.</p></li>
 
-				<p>o <b>CSS:</b> this is used for styling HTML elements, which otherwise just be rendered as the browser draws them. This would most normally be used for styling the embed of your game, or any other HTML elements you have included.</p>
+				<p><li><b>CSS:</b> this is used for styling HTML elements, which otherwise just be rendered as the browser draws them. This would most normally be used for styling the embed of your game, or any other HTML elements you have included.</p></li>
 
-				<p>o <b>JS:</b> and this does all the hardwork! Javascript creates, renders and manipulates everything inside your HTML &lt;canvas&gt; element.</p>
+				<p><li><b>JS:</b> and this does all the hardwork! Javascript creates, renders and manipulates everything inside your HTML &lt;canvas&gt; element.</p></li>
 
-				<p>o <b>JSON: </b>is basically a spreadsheet. It should store all your text content which is rendered in the game, and also config settings, so things can be changed easily by your or the client without having to re-build the thing. This is especially good with the BBC, as you can tweak text and configuration without having to go through tech review again!</p>
+				<p><li><b>JSON: </b>is basically a spreadsheet. It should store all your text content which is rendered in the game, and also config settings, so things can be changed easily by your or the client without having to re-build the thing. This is especially good with the BBC, as you can tweak text and configuration without having to go through tech review again!</p></li>
 
-				</ul>
+				</ol>
 			</ul>
 
 			<p><b>What’s all this WebGL nonsense then?</b></p>
@@ -88,95 +88,111 @@ tags: ["games"]
 
 			<p><li>WebGL can also do lots of cool stuff that a normal canvas element cannot:</p></li>
 
-			<p>o GLSL, which is a shader language allowing you to do cool visual effects over all or part of your canvas. See some examples here: <a href="http://www.goodboydigital.com/pixijs/examples/15/indexAll.html">http://www.goodboydigital.com/pixijs/examples/15/indexAll.html</a></p>
+			<ol>
 
-			<p>o 3D! Using something like three.js: <a href="http://threejs.org/">http://threejs.org/</a></p>
+				<p><li>GLSL, which is a shader language allowing you to do cool visual effects over all or part of your canvas. See some examples here: <a href="http://www.goodboydigital.com/pixijs/examples/15/indexAll.html">http://www.goodboydigital.com/pixijs/examples/15/indexAll.html</a></p></li>
 
-			<p>o Dynamic lighting! Thought we’ve never tried this yet, <a href="http://www.goodboydigital.com/pixijs/pixilights/">http://www.goodboydigital.com/pixijs/pixilights/</a></p>
+				<p><li>3D! Using something like three.js: <a href="http://threejs.org/">http://threejs.org/</a></p></li>
 
-			<p>o Boned animation! Little bits of asset, which are then manipulated on the fly using maths.</p>
+				<p><li>Dynamic lighting! Thought we’ve never tried this yet, <a href="http://www.goodboydigital.com/pixijs/pixilights/">http://www.goodboydigital.com/pixijs/pixilights/</a></p></li>
 
-			<p>o Probably loads more! </p>
+				<p><li>Boned animation! Little bits of asset, which are then manipulated on the fly using maths.</p></li>
 
-			<p><li><b>So how do I use it? </b>If you are using Phaser, you are! Phaser uses the pixi.js renderer, which uses WebGL, and falls back to canvas if it is not available.</p></li>
+				<p><li>Probably loads more! </p></li>
 
-			<p><b>Typescript, grunt, assets, etc: THE SOURCE</b></p>
+			</ol>
 
-			<p><li><b>Typescript:</b> compiles to javascript, but is statically typed. (I think) this means it checks at compile time whether you are passing the correct type of thing into your </li>variable (number, string, etc), and tells you if there is a problem. There are probably other things, but this is what I know about it. </p>
+			<p><b>So how do I use it? </b>If you are using Phaser, you are! Phaser uses the pixi.js renderer, which uses WebGL, and falls back to canvas if it is not available.</p>
 
-			<p><li><b>Grunt:</b> is a taskrunner, and what we use to build the project. It takes all the source files and turns them into the build, and you can configure it do any part of the </li>process you like e.g.</p>
+			<h3>Typescript, grunt, assets, etc: THE SOURCE</h3>
 
-			<p>o Compile TS to JS</p>
+			<p><li><b>Typescript:</b> compiles to javascript, but is statically typed. (I think) this means it checks at compile time whether you are passing the correct type of thing into your variable (number, string, etc), and tells you if there is a problem. There are probably other things, but this is what I know about it. </p>
 
-			<p>o RequireJS (which loads in modules, librarys etc into one file)</p>
+			<p><li><b>Grunt:</b> is a taskrunner, and what we use to build the project. It takes all the source files and turns them into the build, and you can configure it do any part of the process you like e.g.</p>
 
-			<p>o Remove unneeded files</p>
+			<ol>
 
-			<p>o Minification (removing all the whitespace from your code to make it smaller)</p>
+				<p><li>Compile TS to JS</p></li>
 
-			<p>o Optimise images</p>
+				<p><li>RequireJS (which loads in modules, librarys etc into one file)</p></li>
 
-			<p>o FTP deploy to the server</p>
+				<p><li>Remove unneeded files</p></li>
 
-			<p><li><b>Images</b></p></li>
+				<p><li>Minification (removing all the whitespace from your code to make it smaller)</p></li>
 
-			<p>o <b>Images: </b>will graphics will be sprite based, usually PNGs</p>
+				<p><li>Optimise images</p></li>
 
-			<p>o <b>Animations </b>will be sequences of PNGs that play one after another</p>
+				<p><li>FTP deploy to the server</p></li>
 
-			<p>o All your images should be compiled into (preferably) one <b>spritesheet</b> – a big sheet of all the images, and a reference in the game. Use a program like TexturePacker to squeeze them in as tightly as possible.</p>
+			</ol>
 
-			<p>§ <b>Why one spritesheet?</b> Unloading and loading sheets into memory is processor intensive for a device. If it can just load one into memory and that’s it, amazing!</p>
+			<h3>Images</h3>
 
-			<p>§ Spritehsheets should be Power of 2 e.g. 512 x 512, 1024 x 1024, 2048 x 2048, etc. This is the sizes that GPUs use, and should make your game more performant (though if not using WebGL it doesn’t matter).</p>
+			<p><li><b>Images: </b>graphics will be sprite based, usually PNGs</p></li>
 
-			<p><li><b>Sound</b></p></li>
+			<p><li><b>Animations </b>will be sequences of PNGs that play one after another</p></li>
 
-			<p>o <b>Is a lot better than it used to be!</b></p>
+			<p><li>All your images should be compiled into (preferably) one <b>spritesheet</b> – a big sheet of all the images, and a reference in the game. Use a program like TexturePacker to squeeze them in as tightly as possible.</p></li>
 
-			<p>o Web Audio supports polyphonic sound, effects like reverb and more</p>
+			<ol>
 
-			<p>o Internet Explorer and older Android browsers still an issue - Phaser sound falls back to the older Audio API, so it can only play one sound at a time</p>
+				<p><li><b>Why one spritesheet?</b> Unloading and loading sheets into memory is processor intensive for a device. If it can just load one into memory and that’s it, amazing!</p></li>
 
-			<p>o Should effects should be concatenated into sound sprites, which is one long track with all the sounds in, with a time reference for each one.</p>
+				<p><li>Spritehsheets should be Power of 2 e.g. 512 x 512, 1024 x 1024, 2048 x 2048, etc. This is the sizes that GPUs use, and should make your game more performant (though if not using WebGL it doesn’t matter).</p></li>
 
-			<p>o You need MP3 and OGG versions of your sounds.</p>
+			</ol>
 
-			<p>o Music should be as individual looping sounds, and kept as short as possible.</p>
+			<h3>Sound</h3>
 
-			<p>o Use Soundsprite to create them: <a href="https://www.npmjs.com/package/soundsprite">https://www.npmjs.com/package/soundsprite</a></p>
+			<p><li><b>Is a lot better than it used to be!</b></p></li>
 
-			<p><b>Other things!</b></p>
+			<p><li>Web Audio supports polyphonic sound, effects like reverb and more</p></li>
 
-			<p><li><b>Libraries:</b></p></li>
+			<p><li>Internet Explorer and older Android browsers still an issue - Phaser sound falls back to the older Audio API, so it can only play one sound at a time</p></li>
 
-			<p>o There are plenty of good open source javascript libraries for doing lots of cool things. Some we have used on DMK include:</p>
+			<p><li>Should effects should be concatenated into sound sprites, which is one long track with all the sounds in, with a time reference for each one.</p></li>
 
-			<p>§ <b>Hammer</b>: for touch gestures</p>
+			<p><li>You need MP3 and OGG versions of your sounds.</p></li>
 
-			<p>§ <b>Underscore</b>: extends javascript with lots of new functionality you don’t need to write</p>
+			<p><li>Music should be as individual looping sounds, and kept as short as possible.</p></li>
 
-			<p>§ <b>jQuery</b>: same as above </p>
+			<p><li>Use Soundsprite to create them: <a href="https://www.npmjs.com/package/soundsprite">https://www.npmjs.com/package/soundsprite</a></p></li>
 
-			<p>§ <b>JSONpack</b>: for compressing JSON files so they could be emailed (long story)</p>
+			<h3>Other things!</h3>
 
-			<p><li><b>IDEs for Javascript/Typescript:</b></p></li>
+			<p><b>Libraries:</b></p>
 
-			<p>o If they use something like IntelliJ or Visual Studio Code will make life a lot easier for your developers: error highlighting, lookups, hints for Typescript.</p>
+			<p><li>There are plenty of good open source javascript libraries for doing lots of cool things. Some we have used on DMK include:</p></li>
 
-			<h3>things to be aware of…</h3>
+			<ol>
 
-			<p><li><b>Performance</b> is <i>always</i> an issue on devices. Save lots of time for optimising your game, and make sure you test it on devices throughout the build process, not </li>just at the end!</p>
+				<p><li><b>Hammer</b>: for touch gestures</p></li>
+
+				<p><li><b>Underscore</b>: extends javascript with lots of new functionality you don’t need to write</p></li>
+
+				<p><li><b>jQuery</b>: same as above </p></li>
+
+				<p><li><b>JSONpack</b>: for compressing JSON files so they could be emailed (long story)</p></li>
+
+			</ol>
+
+			<p><b>IDEs for Javascript/Typescript:</b></p>
+
+			<p><li>If they use something like IntelliJ or Visual Studio Code will make life a lot easier for your developers: error highlighting, lookups, hints for Typescript.</p></li>
+
+			<h3>Things to be aware of…</h3>
+
+			<p><li><b>Performance</b> is <i>always</i> an issue on devices. Save lots of time for optimising your game, and make sure you test it on devices throughout the build process, not just at the end!</p></li>
 
 			<p><li><b>iOS</b> for some reason needs a touch/click event before it will play any sound. Make sure you have one of these before anything important happens in your game!</p></li>
 
-			<p><li><b>All browsers</b> will perform differently, so again, leave lots of time for testing. REMEMBER that Twitter and Facebook both have their own internal browsers now. 50% of </li>the mobile traffic to Eastenders Storyteller is the Facebook internal browser! FFS!</p>
+			<p><li><b>All browsers</b> will perform differently, so again, leave lots of time for testing. REMEMBER that Twitter and Facebook both have their own internal browsers now. 50% of the mobile traffic to Eastenders Storyteller is the Facebook internal browser! FFS!</p></li>
 
-			<p><li><b>Accessibility</b> for the blind (e.g. tab controls and screen readers) has been bad for a while in Phaser and canvas games in general, as the tools rely on the DOM to be </li>read. The way to get around this is to make all the UI as DOM elements and overlay the phaser canvas with them. (See Something Special and Deadly Defenders.)</p>
+			<p><li><b>Accessibility</b> for the blind (e.g. tab controls and screen readers) has been bad for a while in Phaser and canvas games in general, as the tools rely on the DOM to be read. The way to get around this is to make all the UI as DOM elements and overlay the phaser canvas with them. (See Something Special and Deadly Defenders.)</p></li>
 
-			<p><li><b>File size, </b>mobile games may be loaded over mobile networks and we should take care to not over use end users’ data plans. Libraries like require js can help by </li>minifying and combining all the javascript, but content is the real killer.</p>
+			<p><li><b>File size, </b>mobile games may be loaded over mobile networks and we should take care to not over use end users’ data plans. Libraries like require js can help by minifying and combining all the javascript, but content is the real killer.</p></li>
 
-			<p><li><b>Scope, </b>The DMK projects are the exception as opposed to the rule. It is best to have a good mechanic that is well polished than lots of content, which will damage </li>performance, and increase filesize. KISS!</p>
+			<p><li><b>Scope, </b>The DMK projects are the exception as opposed to the rule. It is best to have a good mechanic that is well polished than lots of content, which will damage performance, and increase filesize. KISS!</p></li>
 
 				</section>
 </div>

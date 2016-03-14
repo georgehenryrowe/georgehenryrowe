@@ -8,8 +8,9 @@
 // * @author James Wilson http://jimmynotjim.com
 // * @version 1.1
 // *
+@charset "UTF-8";
 
-// Utility variable — you should never need to modify this
+
 $gridsystem_width: $columns * 1px;
 $padding:$gutter_width*0.5;
 //$correction: 0.5 / $max_width * 100 * 1%; // NOTE: Check this in IE
