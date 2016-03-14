@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:300);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600);
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -339,10 +338,10 @@ html {
   font-size: 100.01%; }
 
 body {
-  font-size: 100%;
+  font-size: 115%;
   color: #333;
   line-height: 1.5em;
-  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: "Work Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
   background-color: #111;
   text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.01);
   -webkit-font-smoothing: antialiased;
@@ -373,7 +372,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: "Work Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
   color: #111;
   font-weight: 400; }
 
@@ -483,28 +482,28 @@ textarea {
   padding: 0.3em;
   border: 1px solid #ccc;
   line-height: 1.5em;
-  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, Sans-Serif; }
+  font-family: "Work Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif; }
 
 select {
   width: 100%;
   height: 2.1em;
   margin-bottom: 0.9em;
   border: 1px solid #ccc;
-  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, Sans-Serif; }
+  font-family: "Work Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif; }
 
 input[type="range"],
 input[type="color"] {
   vertical-align: middle;
   height: 1.5em;
   width: 100%;
-  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, Sans-Serif; }
+  font-family: "Work Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif; }
 
 input[type="range"] {
   height: 1.4em; }
 
 input[type="color"] {
   width: 1.5em;
-  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, Sans-Serif; }
+  font-family: "Work Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif; }
 
 input[type="time"] {
   margin: 0 0 0.55em; }
@@ -521,7 +520,7 @@ input[type="button"] {
   background: #ddd;
   padding: 0.7em 2em;
   margin: 0 20px 0 0;
-  font-family: "Roboto", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: "Work Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
   line-height: 1.5em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -741,7 +740,7 @@ header#ghrhead > div {
     padding-top: 1.5em;
     font-size: 125%; }
   .mainmenu nav li {
-    font-family: "Inconsolata", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+    font-family: "Work Sans", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
     display: inline;
     padding-left: 20px; }
     .mainmenu nav li a {
@@ -761,6 +760,7 @@ header#ghrhead > div {
 #topbar {
   position: fixed;
   z-index: 20;
+  font-weight: 600;
   top: 0;
   background: #F08080;
   max-width: none !important;
@@ -768,8 +768,9 @@ header#ghrhead > div {
   animation: color-change-3 90s infinite;
   -webkit-animation: color-change-3 90s infinite; }
   #topbar h1 {
-    font-family: "Inconsolata", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+    font-family: "Work Sans", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
     width: auto;
+    font-weight: 600;
     font-size: 2rem;
     color: #fff;
     margin: 0;
@@ -1154,7 +1155,7 @@ figcaption h3 {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-family: "Inconsolata", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+  font-family: "Work Sans", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
   font-style: normal;
   font-size: 2em;
   padding: 0;
