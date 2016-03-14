@@ -29,17 +29,18 @@ $max_width: 1008px; // Set a maximum width of the site
 // * 75% for 12px font and 18px baseline.
 // *
 // *
-$baseline: 100%;
+$baseline: 115%;
 
 // Font variables
 $body_color: #333;
 $heading_color: #111;
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:300);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:700);
+// @import url(http://fonts.googleapis.com/css?family=Roboto:300);
+// @import url(http://fonts.googleapis.com/css?family=Inconsolata:700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600);
 
-$body_family: "Roboto", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
-$header_family: "Inconsolata", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+$body_family: "Work Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
+$header_family: "Work Sans", "Open Sans", "Helvetica Neue", Arial, Helvetica, Sans-Serif;
 
 // Select colors
 $select: #78aace;
@@ -147,6 +148,7 @@ header#ghrhead{
 #topbar {
 	position: fixed;
 	z-index: 20;
+	font-weight: 600;
 	top:0;
 	background: $colour1;
 	max-width: none!important;
@@ -156,6 +158,7 @@ header#ghrhead{
 	h1 {
 		font-family: $header_family;
 		width: auto;
+		font-weight: 600;
 		font-size: 2rem;
 		color: #fff;
 		margin: 0;
