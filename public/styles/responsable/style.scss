@@ -265,6 +265,10 @@ a.contact {
     -webkit-animation: color-change 90s infinite;
 }
 
+.videoContainer {
+	margin-bottom: 30px;
+}
+
 
 /* COLOR ANIMATIONS */
 
@@ -625,7 +629,7 @@ figcaption h3 {
  * Don't add breakpoints aimed at device pixel widths,
  * add them where they suit best for your design.
  */
-@media screen and (max-width: 750px){
+@media screen and (max-width: 1030px){
 	.mainmenu {
 		display:none;
 	}

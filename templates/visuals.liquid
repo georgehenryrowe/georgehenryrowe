@@ -1,0 +1,43 @@
+{% block content %}
+	<div>
+			<section>
+
+				<section id="Visuals">
+
+					<hr />
+
+					<h2>Visuals</h2>
+
+					<hr />
+
+				</section>
+
+				<br />
+
+				<p class="pullOut">I've just started learning and mucking around with Processing and also the Hype framework after doing a course by Joshua Davis and working with Stefan Goodchild.</p>
+				<p class="pullOut">Weird results will be posted here, mainly audio reactive visuals and generative art. Click on the titles to launch, will eventually add thumbnails and that.</p>
+
+				<h3>Spinning Mind Cube of Games</h3>
+				<p>Two cubes spin based on x, y, z, and speed is from frequency of different parts of the audio. Red and blue point lights in the corners which change z depth based on bass (lol), and one in the middle of the cube with rgb values that change colour randomly based on frameCount and other things. Cube opacity changes from amplitude of bass.</p>
+				<p>Track is <a href="https://www.discogs.com/Hodge-Mind-Games-Flashback/release/6150320">Hodge - Mind Games</a>. Hope you don't mind Jake!</p>
+				<p>NB I wanted to try using ProcessingJS/p5js so removed all the Hype stuff from this build, but then couldn't figure out how to export/change yet.</p>
+
+				<h3><a href="https://vimeo.com/160528707">StephDoug</a></h3>
+				<div class="videoContainer">
+					<iframe src="https://player.vimeo.com/video/160528707?color=ff0179&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div>
+				<p>It was my good friend Steph's birthday, so I decided to make her Something weird involving her face, her cat, and some basics I learned on the <a href="https://gumroad.com/joshuadavis">Painting with Sound III</a> course. Uses Hype, so can't currently figure out how to export for web properly so you will have to do with this video.</p>
+				<p>Oscillates at a speed based on the frequency band, colours also set by different frequency bands in the song, and size of sprite changes with amplitude.</p>
+
+			</section>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+		<script>
+		  $(document).ready(function(){
+		    // Target your .container, .wrapper, .post, etc.
+		    $(".videoContainer").fitVids();
+		  });
+</script>
+
+{% endblock %}

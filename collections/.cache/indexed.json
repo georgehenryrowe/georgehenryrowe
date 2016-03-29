@@ -566,5 +566,92 @@
         ]
       }
     }
+  },
+  "visuals": {
+    "collection": {
+      "/visuals/spinningmindcubeofgames": {
+        "title": "Spinning Mind Cube of Games",
+        "published": true,
+        "date": "2016-03-29 00:00:00 UTC",
+        "slug": "/visuals/spinningmindcubeofgames",
+        "tags": [
+          "audioreactive"
+        ],
+        "layout": "visuals",
+        "body": "\n\n<script src=\"http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/p5.js\"></script>\n",
+        "month": "03",
+        "year": "2016",
+        "ticks": 1459209600.0,
+        "mixture_month_year": "03/2016",
+        "mixture_date": "2016-03-29T00:00:00Z"
+      }
+    },
+    "index": {
+      "title": {
+        "spinning mind cube of games": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "transliterated-title": {
+        "spinning-mind-cube-of-games": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "slug": {
+        "/visuals/spinningmindcubeofgames": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "transliterated-slug": {
+        "/visuals/spinningmindcubeofgames": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "tags": {
+        "audioreactive": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "transliterated-tags": {
+        "audioreactive": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "layout": {
+        "visuals": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "transliterated-layout": {
+        "visuals": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "month": {
+        "03": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "year": {
+        "2016": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "ticks": {
+        "1459209600.0": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "mixture_month_year": {
+        "03/2016": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      },
+      "mixture_date": {
+        "2016-03-29t00:00:00z": [
+          "/visuals/spinningmindcubeofgames"
+        ]
+      }
+    }
   }
 }
