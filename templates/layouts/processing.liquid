@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}George Henry Rowe | Digital Producer, Web Design, other{% endblock %}</title>
+        {{ "style.css" | asset_url | stylesheet_tag }}
+        {{ "scripts.js" | asset_url | script_tag }}
+        <!-- TODO: OOCSS-ify the custom styles and break up the base into smaller modules :) -->
+        <script src="../public/scripts/libs/typingtext.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    </head>
+
+    <style>
+
+
+        body {
+            background-color: #000;
+            animation: color-change-3 90s infinite;
+            -webkit-animation: color-change-3 90s infinite;
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            width: 50%;
+            margin: 0 auto;
+        }
+/*        #content {
+            background: none;
+            background-color: #000;
+            animation: color-change-3 90s infinite;
+            -webkit-animation: color-change-3 90s infinite;
+        }*/
+
+    </style>
+
+
+    <body>
+
+            <!-- <div id="sketch-holder"> -->
+            <!-- <h1>George Henry Rowe</h1> -->
+            <!-- </div> -->
+
+    </body>
+</html>

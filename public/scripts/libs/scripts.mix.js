@@ -3,7 +3,10 @@
 @import "picture.js";
 @import "jquery.fitvids.min.js";
 @import "howler.min.js";
-@import "instafeed.min.js"
+@import "instafeed.min.js";
+// @import "p5.min.js";
+@import "sketch.js";
+
 // @import "classie.js";
 // @import "demo1.js";
 // @import "modernizr.custom.js";
