@@ -20,6 +20,7 @@
     "simpleModeFileTypes": null,
     "modelSource": null,
     "domain": null,
+    "reload": -1,
     "followLeader": false,
     "routes": null,
     "customRuby": false,

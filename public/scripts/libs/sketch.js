@@ -4,8 +4,6 @@ var pg;
 function setup() {           // **change** void setup() to function setup()
   createCanvas(windowWidth, windowHeight, WEBGL);    // **change** size() to createCanvas()
   noFill();                  // noFill() is the same
-  pg = createGraphics(200, 200);
-  pg.textSize(100);
 }
 
 function draw() {                         // **change** void draw() to function draw()
@@ -16,14 +14,20 @@ function draw() {                         // **change** void draw() to function 
 	// textSize(100);
 	// stroke(value);               // stroke() is the same
 	// text("George Henry Rowe", mouseX, mouseY);
-  rotateX(frameCount*0.01);
-  rotateY(frameCount*0.01);
-  rotateZ(mouseX*0.01);
-  // pg.background(100,50);
-  // pg.text('hello!', 255, 100);
-  // texture(pg);  
-  // translateZ(frameCount*0.01);
-  box(200,200,200);
+    // 
+    push(); 
+      rotateX(frameCount*0.01);
+      rotateY(frameCount*0.01);
+      rotateZ(mouseX*0.005);
+      rotateZ(accelerationY * 0.01);
+      // pg.background(100,50);
+      // pg.text('hello!', 255, 100);
+      // texture(pg);  
+      // translateZ(frameCount*0.01);
+      box(200,200,200);
+    pop();
+
+
   
 }
 
@@ -34,3 +38,4 @@ function mouseClicked() {
     value = 0;
   }
 }
+
