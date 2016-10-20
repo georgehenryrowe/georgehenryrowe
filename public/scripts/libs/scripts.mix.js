@@ -4,8 +4,10 @@
 @import "jquery.fitvids.min.js";
 @import "howler.min.js";
 @import "instafeed.min.js";
-// @import "p5.min.js";
+@import "p5.min.js";
+@import "p5.collide2d.js";
 @import "sketch.js";
+
 
 // @import "classie.js";
 // @import "demo1.js";
