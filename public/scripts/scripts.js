@@ -1291,6 +1291,8 @@ function draw() {                         // **change** void draw() to function 
 
   textSize(100);
   text(score,100,100);
+  textSize(25);
+  text("Try and avoid the blocks",100,150);
 
 }
 
@@ -1306,7 +1308,7 @@ function rectObj(x,y,w,h){
 
 		this.hit = collideRectCircle(this.x, this.y, this.w, this.h, obj.x, obj.y, obj.dia); //collide the cir object into this rectangle object.
 
-		if(this.hit && flag){
+		if(this.hit){
 			this.color = color(0) //set this rectangle to be black if it gets hit
       score -= 1
 		}
