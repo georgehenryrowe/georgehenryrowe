@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>George Henry Rowe | A Choose Your Own Adventure</title>
-        <link href="../public/styles/style.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="../public/styles/style.min.css" rel="stylesheet" type="text/css" media="all" />
         <script src="../public/scripts/scripts.min.js"></script>
         <!-- TODO: OOCSS-ify the custom styles and break up the base into smaller modules :) -->
         <script src="../public/scripts/libs/typingtext.js"></script>
@@ -32,60 +32,45 @@
 
             <div id="content">
 
-                
-
-<style>
-
+                <style>
 	body {
-		background:url(/public/images/static.gif)no-repeat center center fixed;
+		background:url(../public/images/static.gif)no-repeat center center fixed;
 		background-size: cover;
 	}
-
 	#content {
-		background:url(/public/images/static.gif)no-repeat center center fixed;
+		background:url(../public/images/static.gif)no-repeat center center fixed;
 		background-size: cover;
 		height: 100%;
 	}
-
 	#blood {
 		-webkit-animation: bloodSplat 1 backwards;
 		-webkit-animation-delay:5s;
 		height: 1000px;
-		background:url(/public/images/blood.png)no-repeat center center fixed;
+		background:url(../public/images/blood.png)no-repeat center center fixed;
 	}
-
 	@-webkit-keyframes bloodSplat {
 	0%   {opacity: 0;}
 	100% {opacity: 1;}
 }
-
 </style>
-
 <div>
-
 	<section>
-
 		<div class="toTop">
-
 			<p class="fadeIn2s">...can you see something in the static?</p>
-
 		<div id="blood">
 		</div>
-
 <script>
 	var sound = new Howl({
 	urls: ['../public/sounds/static.mp3'],
 	loop: true,
 	volume: 0.1,
 	}).play();
-
 	setTimeout(function (){
 		var sound2 = new Howl({
 		urls: ['../public/sounds/splat2.mp3']
 		}).play();
 	}, 5000);
 </script>
-
 
             </div>
 

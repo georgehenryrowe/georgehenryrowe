@@ -1,12 +1,24 @@
 var value = 0;
 var pg;
 var rects = [];
-var numRects = 50;
-var score = numRects;
+var numRects = 40;
+var score = 0;
+var timer = 0;
+var rateChange;
+
+function preload() {
+  drums = loadSound('../public/sounds/break.mp3');
+  noise1 = loadSound('../public/sounds/noise1.mp3');
+
+}
 
 function setup() {           // **change** void setup() to function setup()
   var canvas = createCanvas(windowWidth, windowHeight);    // **change** size() to createCanvas()
   canvas.parent('sketch-holder');
+  noise1.setVolume(0.2);
+
+  drums.loop();
+  amplitude = new p5.Amplitude();
 
   for(i=0;i<numRects;i++){
 		r = new rectObj(random(width),random(height), random(10,100), random(10,100) ) // generate a rectObj
@@ -18,28 +30,19 @@ function setup() {           // **change** void setup() to function setup()
 }
 
 
-function draw() {                         // **change** void draw() to function draw()
-  background(50);
-  // fill(0,1);
-  // rect(0,0,windowWidth,windowHeight);                          // background() is the same
+function draw() {
+  
+	var level = amplitude.getLevel();
+	var levelChange = map(level,0,0.5,0,300);
 
+	var speed = map(mouseY, 0.1, height, 1, 2);
+	speed = constrain(speed, 1, 1.5);
+	noise1.rate(speed);
 
+	background(levelChange);
+	//   console.log(mySound.rate);
 
-	// 
-	// stroke(value);               // stroke() is the same
-	// text("George Henry Rowe", mouseX, mouseY);
-    // 
-    // push(); 
-    //   rotateX(frameCount*0.01);
-    //   rotateY(frameCount*0.01);
-    //   rotateZ(mouseX*0.005);
-    //   rotateZ(accelerationY * 0.01);
-    //   // pg.background(100,50);
-    //   // pg.text('hello!', 255, 100);
-    //   // texture(pg);  
-    //   // translateZ(frameCount*0.01);
-    //   box(200,200,200);
-    // pop();
+	timer = ceil(timer + 0.01);
 
   for(i=0;i<numRects;i++){
 		rects[i].disp();
@@ -49,10 +52,20 @@ function draw() {                         // **change** void draw() to function 
 	cir.disp(mouseX,mouseY); //pass the x,y pos in to the circle.
 
   textSize(100);
-  text(score,100,100);
-  textSize(25);
-  text("Try and avoid the blocks",100,150);
+  text(timer,100,100);
 
+textSize(25);
+  if (timer < 200) {
+	text("Try and avoid the blocks",100,150);
+  }
+
+if (timer > 1000 && timer < 1200) {
+	text("Well done! Keep going!",100,150);
+  }
+
+if (timer > 3000) {
+	text("Sorry, I haven't done and end yet. Might as well enter the site.",100,150);
+  }
 }
 
 function rectObj(x,y,w,h){
@@ -69,12 +82,13 @@ function rectObj(x,y,w,h){
 
 		if(this.hit){
 			this.color = color(0) //set this rectangle to be black if it gets hit
-      score -= 1
+			score += 1
+			noise1.play()
 		}
 
 	}
 
-  var randomX = random(1,10);
+  var randomX = random(1,5);
 
 	this.disp = function(){
 		noStroke();
