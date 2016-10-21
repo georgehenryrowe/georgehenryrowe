@@ -2,8 +2,8 @@ var value = 0;
 var pg;
 var rects = [];
 var numRects = 40;
+var lives = 100;
 var score = 0;
-var timer = 0;
 var rateChange;
 
 function preload() {
@@ -15,7 +15,7 @@ function preload() {
 function setup() {           // **change** void setup() to function setup()
   var canvas = createCanvas(windowWidth, windowHeight);    // **change** size() to createCanvas()
   canvas.parent('sketch-holder');
-  noise1.setVolume(0.2);
+  noise1.setVolume(0.01);
 
   drums.loop();
   amplitude = new p5.Amplitude();
@@ -36,13 +36,13 @@ function draw() {
 	var levelChange = map(level,0,0.5,0,300);
 
 	var speed = map(mouseY, 0.1, height, 1, 2);
-	speed = constrain(speed, 1, 1.5);
+	// speed = constrain(speed, 1, 1.5);
 	noise1.rate(speed);
 
 	background(levelChange);
 	//   console.log(mySound.rate);
 
-	timer = ceil(timer + 0.01);
+	score = ceil(score + 0.01);
 
   for(i=0;i<numRects;i++){
 		rects[i].disp();
@@ -51,21 +51,31 @@ function draw() {
 
 	cir.disp(mouseX,mouseY); //pass the x,y pos in to the circle.
 
+	textSize(50);
+  text(lives,10,100);
   textSize(100);
-  text(timer,100,100);
+  text(score,100,100);
+
 
 textSize(25);
-  if (timer < 200) {
+  if (score < 200) {
 	text("Try and avoid the blocks",100,150);
   }
 
-if (timer > 1000 && timer < 1200) {
+if (score > 1000 && score < 1200) {
 	text("Well done! Keep going!",100,150);
   }
 
-if (timer > 3000) {
-	text("Sorry, I haven't done and end yet. Might as well enter the site.",100,150);
+if (score > 3000) {
+	text("Sorry, I haven't done an end yet. Might as well enter the site.",100,150);
   }
+
+if (lives <= 0) {
+	textSize(200);
+	// background(0);
+	text("GAME OVER",100,windowHeight/2);
+	noLoop();
+	}
 }
 
 function rectObj(x,y,w,h){
@@ -82,7 +92,7 @@ function rectObj(x,y,w,h){
 
 		if(this.hit){
 			this.color = color(0) //set this rectangle to be black if it gets hit
-			score += 1
+			lives -= 1
 			noise1.play()
 		}
 
