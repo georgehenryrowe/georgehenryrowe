@@ -24,12 +24,10 @@ function preload() {
 function setup() { // **change** void setup() to function setup()
 	// **change** size() to createCanvas()
 
-	if ($('#sketch-holder').length) {
+	if (!!$('#sketch-holder').length) {
 		var canvas = createCanvas(windowWidth, windowHeight);
 		canvas.parent('sketch-holder');
 	}
-
-	noise1.setVolume(0.01);
 
 	drums.loop();
 
@@ -44,6 +42,7 @@ function setup() { // **change** void setup() to function setup()
 		soundArray[7] = noise7;
 		soundArray[8] = noise8;
 	}
+
 	amplitude = new p5.Amplitude();
 
 	for (i = 0; i < numRects; i++) {
@@ -81,7 +80,7 @@ function draw() {
 
 	textSize(25);
 	text("Sound: " + playSoundNumber, 100, 100);
-	text("Pitch: " + nfc(speed,2), 100, 140);
+	text("Pitch: " + nfc(speed, 2), 100, 140);
 
 	// textSize(100);
 	// text(score,100,100);
