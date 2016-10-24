@@ -1,3 +1,4 @@
+// document.addEventListener("DOMContentLoaded", function (event) {
 @import "modernizr-2.5.3.min.js";
 @import "jquery-1.7.1.min.js"
 @import "picture.js";
@@ -17,21 +18,21 @@
 /**
  * Add Modernizr test for box sizing
  */
-Modernizr.addTest("boxsizing", function(){
+Modernizr.addTest("boxsizing", function () {
 	return Modernizr.testAllProps("boxSizing") && (document.documentMode === undefined || document.documentMode > 7);
 });
 
 /**
  * Change the width of all elements to account for border-box
  */
-$(function(){
-	if(!($('html').hasClass('boxsizing'))){
-		$('*').each(function(){
-			if($(this).css('display')=='block'){
+$(function () {
+	if (!($('html').hasClass('boxsizing'))) {
+		$('*').each(function () {
+			if ($(this).css('display') == 'block') {
 				var f, a, n;
 				f = $(this).outerWidth();
 				a = $(this).width();
-				n = a-(f-a);
+				n = a - (f - a);
 				$(this).css('width', n);
 			}
 		});
@@ -41,6 +42,14 @@ $(function(){
 /**
  * Make images responsive using jQuery Picture
  */
-$(function(){
-	$('figure.responsive').picture({ container : $('#content') });
+$(function () {
+	$('figure.responsive').picture({
+		container: $('#content')
+	});
 });
+
+// var $theCanvas = $("#defaultCanvas0");
+if ($('#defaultCanvas0').width() < 200) {
+	$('#defaultCanvas0').remove()
+}
+// });
