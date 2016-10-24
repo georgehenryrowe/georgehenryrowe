@@ -24,6 +24,13 @@ function preload() {
 	noise9 = loadSound('../public/sounds/wavy_1.mp3');
 	noise10 = loadSound('../public/sounds/wavy_2.mp3');
 	noise11 = loadSound('../public/sounds/wavy_3.mp3');
+	noise12 = loadSound('../public/sounds/Synth-SoggyFishstick.mp3');
+	noise13 = loadSound('../public/sounds/Synth-TortoiseOne.mp3');
+	noise14 = loadSound('../public/sounds/Synth-TransistoFunk.mp3');
+	noise15 = loadSound('../public/sounds/Synth-Twinpeakish3.mp3');
+	noise16 = loadSound('../public/sounds/Synth-Wompi.mp3');
+	noise17 = loadSound('../public/sounds/Synth-Xeno.mp3');
+
 }
 
 function setup() { // **change** void setup() to function setup()
@@ -49,6 +56,12 @@ function setup() { // **change** void setup() to function setup()
 		soundArray[9] = noise9;
 		soundArray[10] = noise10;
 		soundArray[11] = noise11;
+		soundArray[12] = noise12;
+		soundArray[13] = noise13;
+		soundArray[14] = noise14;
+		soundArray[15] = noise15;
+		soundArray[16] = noise16;
+		soundArray[17] = noise17;
 	}
 
 	amplitude = new p5.Amplitude();
@@ -136,7 +149,7 @@ function rectObj(x, y, w, h) {
 			playSoundNumber++
 			this.isCollisioning = true
 				// console.log(this.isCollisioning)
-			if (playSoundNumber > 11) {
+			if (playSoundNumber > 17) {
 				playSoundNumber = 0;
 			}
 		}
