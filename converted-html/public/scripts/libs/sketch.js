@@ -1,4 +1,4 @@
-var pg;
+var filterType;
 var rects = [];
 var numRects = 80;
 var lives = 0;
@@ -10,6 +10,8 @@ var randomX;
 
 function preload() {
 	drums = loadSound('../public/sounds/break.mp3');
+	// drums2 = loadSound('../public/sounds/drums_2.mp3');
+
 	noise0 = loadSound('../public/sounds/pad_flute_select.mp3');
 	noise1 = loadSound('../public/sounds/pad_glow_chord.mp3');
 	noise2 = loadSound('../public/sounds/pad_glow_welcome2.mp3');
@@ -19,17 +21,18 @@ function preload() {
 	noise6 = loadSound('../public/sounds/pad_space_fade_01.mp3');
 	noise7 = loadSound('../public/sounds/pad_glow_welcome2.mp3');
 	noise8 = loadSound('../public/sounds/pad_glow_power_off_01.mp3');
+	noise9 = loadSound('../public/sounds/wavy_1.mp3');
+	noise10 = loadSound('../public/sounds/wavy_2.mp3');
+	noise11 = loadSound('../public/sounds/wavy_3.mp3');
 }
 
 function setup() { // **change** void setup() to function setup()
 	// **change** size() to createCanvas()
 
-	if ($('#sketch-holder').length) {
-		var canvas = createCanvas(windowWidth, windowHeight);
-		canvas.parent('sketch-holder');
-	}
-
-	noise1.setVolume(0.01);
+	// if (!!$('#sketch-holder').length) {
+	var canvas = createCanvas(windowWidth, windowHeight);
+	canvas.parent('sketch-holder');
+	// }
 
 	drums.loop();
 
@@ -43,7 +46,11 @@ function setup() { // **change** void setup() to function setup()
 		soundArray[6] = noise6;
 		soundArray[7] = noise7;
 		soundArray[8] = noise8;
+		soundArray[9] = noise9;
+		soundArray[10] = noise10;
+		soundArray[11] = noise11;
 	}
+
 	amplitude = new p5.Amplitude();
 
 	for (i = 0; i < numRects; i++) {
@@ -70,7 +77,7 @@ function draw() {
 	background(levelChange);
 	//   console.log(mySound.rate);
 
-	score = ceil(score + 0.01);
+	// score = ceil(score + 0.01);
 
 	for (i = 0; i < numRects; i++) {
 		rects[i].disp();
@@ -81,7 +88,7 @@ function draw() {
 
 	textSize(25);
 	text("Sound: " + playSoundNumber, 100, 100);
-	text("Pitch: " + nfc(speed,2), 100, 140);
+	text("Pitch: " + nfc(speed, 2), 100, 140);
 
 	// textSize(100);
 	// text(score,100,100);
@@ -106,6 +113,7 @@ function draw() {
 	// 	text("GAME OVER",100,windowHeight/2);
 	// 	noLoop();
 	// 	}
+
 }
 
 function rectObj(x, y, w, h) {
@@ -127,8 +135,8 @@ function rectObj(x, y, w, h) {
 			soundArray[playSoundNumber].play()
 			playSoundNumber++
 			this.isCollisioning = true
-			console.log(this.isCollisioning)
-			if (playSoundNumber > 8) {
+				// console.log(this.isCollisioning)
+			if (playSoundNumber > 11) {
 				playSoundNumber = 0;
 			}
 		}
