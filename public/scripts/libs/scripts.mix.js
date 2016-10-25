@@ -5,7 +5,7 @@
 @import "jquery.fitvids.min.js";
 // @import "howler.min.js";
 // @import "instafeed.min.js";
-@import "p5.min.js";
+// @import "p5.min.js";
 @import "p5.collide2d.js";
 @import "p5.sound.js";
 @import "sketch.js";

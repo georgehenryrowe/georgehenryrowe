@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>{% block title %}George Henry Rowe | Digital Producer, Generative Design, Web Design, Other{% endblock %}</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.js"></script>
+
         {{ "style.css" | asset_url | stylesheet_tag }}
         {{ "scripts.js" | asset_url | script_tag }}
         <!-- TODO: OOCSS-ify the custom styles and break up the base into smaller modules :) -->
@@ -11,7 +13,7 @@
         <script src="../public/scripts/libs/p5.collide2d.min.js"></script>
         <script src="../public/scripts/libs/p5.sound.js"></script>
         <script src="../public/scripts/libs/sketch.min.js"></script>{% endcomment %}
-        {% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.js"></script>{% endcomment %}
+
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
 
@@ -40,9 +42,11 @@
         }
 
         img {
-            width:200px;
-            margin:100px auto;
+            position:absolute;
+            width:100px;
+            left:100px;
             top:200px;
+            z-index:-1;
         }
 
     </style>
