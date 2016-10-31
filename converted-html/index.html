@@ -1,14 +1,16 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>George Henry Rowe | Digital Producer, Generative Design, Web Design, Other</title>
-        <link href="public/styles/style.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.js"></script>
+
+        <link href="public/styles/style.min.css" rel="stylesheet" type="text/css" media="all" />
         <script src="public/scripts/scripts.min.js"></script>
         <!-- TODO: OOCSS-ify the custom styles and break up the base into smaller modules :) -->
         <script src="../public/scripts/libs/typingtext.js"></script>
         
-        
+
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
 
@@ -37,9 +39,11 @@
         }
 
         img {
-            width:200px;
-            margin:100px auto;
+            position:absolute;
+            width:100px;
+            left:100px;
             top:200px;
+            z-index:-1;
         }
 
     </style>
