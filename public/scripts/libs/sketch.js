@@ -69,7 +69,7 @@
 			amplitude = new p5.Amplitude();
 
 			for (i = 0; i < numRects; i++) {
-				r = new rectObj(random(width), random(height), random(10, 100), random(10, 100)) // generate a rectObj
+				r = new rectObj(random(width), random(height), random(10, 100), random(10, 100)); // generate a rectObj
 				rects.push(r); //add it to the array.
 			}
 
@@ -118,11 +118,11 @@
 		}
 
 		function rectObj(x, y, w, h) {
-			this.x = x
-			this.y = y
-			this.w = w
-			this.h = h
-			this.color = color(random(102, 255), random(102, 255), random(102, 255))
+			this.x = x;
+			this.y = y;
+			this.w = w;
+			this.h = h;
+			this.color = color(random(102, 255), random(102, 255), random(102, 255));
 			this.hit = false;
 			this.isCollisioning = false;
 
@@ -131,39 +131,39 @@
 				this.hit = collideRectCircle(this.x, this.y, this.w, this.h, obj.x, obj.y, obj.dia); //collide the cir object into this rectangle object.
 
 				if (this.hit && !this.isCollisioning) {
-					this.color = color(0) //set this rectangle to be black if it gets hit
-					lives++
-					soundArray[playSoundNumber].play()
-					playSoundNumber++
-					this.isCollisioning = true
+					this.color = color(0); //set this rectangle to be black if it gets hit
+					lives++;
+					soundArray[playSoundNumber].play();
+					playSoundNumber++;
+					this.isCollisioning = true;
 						// console.log(this.isCollisioning)
 					if (playSoundNumber > 17) {
 						playSoundNumber = 0;
 					}
 				}
 
-			}
+			};
 
 			var randomX = random(1, 5);
 
 			this.disp = function () {
 				noStroke();
 				fill(this.color);
-				this.x += randomX //move to the right!
+				this.x += randomX; //move to the right!
 				if (this.x > width) { //loop to the left!
 					this.x = -this.w;
 				}
 				rect(this.x, this.y, this.w, this.h);
 
-			}
+			};
 
 		}
 
 		function circleObj(dia) {
 			this.dia = dia;
-			this.color = color(random(255), random(255), random(255))
-			this.x;
-			this.y;
+			this.color = color(random(255), random(255), random(255));
+			// this.x;
+			// this.y;
 
 			this.disp = function (x, y) {
 				this.x = x;
@@ -171,7 +171,7 @@
 				noStroke();
 				fill(this.color);
 				ellipse(this.x, this.y, this.dia, this.dia);
-			}
+			};
 
 		}
 
